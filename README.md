@@ -1,0 +1,1 @@
+# prakticka2018adlerka

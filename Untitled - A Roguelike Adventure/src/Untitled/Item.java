@@ -1,0 +1,90 @@
+package Untitled;
+
+import java.awt.*;
+
+public class Item {
+
+    private char glyph;
+    public char glyph() {
+        return glyph;
+    }
+
+    private Color color;
+    public Color color() {
+        return color;
+    }
+
+    private String name;
+    public String name() {
+        return name;
+    }
+
+    private int foodValue; //items that add food when used
+    public int foodValue() {
+        return foodValue;
+    }
+    public void modifyFoodValue(int amount) {
+        foodValue += amount;
+    }
+
+    private int attackValue; //items that have an att value
+    public int attackValue() {
+        return attackValue;
+    }
+    public void modifyAttackValue(int amount) {
+        attackValue += amount;
+    }
+
+    private int defenseValue; //def value for items
+    public int defenseValue() {
+        return defenseValue;
+    }
+    public void modifyDefenseValue(int amount) {
+        defenseValue += amount;
+    }
+
+    private int thrownAttackValue; //thrown att for items
+    public int thrownAttackValue() {
+        return thrownAttackValue;
+    }
+    public void modifyThrownAttackValue(int amount) {
+        thrownAttackValue += amount;
+    }
+
+    private int rangedAttackValue; //ranged att for items
+    public int rangedAttackValue() {
+        return rangedAttackValue;
+    }
+    public void modifyRangedAttackValue(int amount) {
+        rangedAttackValue += amount;
+    }
+
+    private Effect drinkEffect; //items that can have effect when used
+    public Effect drinkEffect() {
+        return drinkEffect;
+    }
+    public void setDrinkEffect(Effect effect) {
+        this.drinkEffect = effect;
+    }
+
+    public Item(char glyph, Color color, String name) {
+        this.glyph = glyph;
+        this.color = color;
+        this.name = name;
+    }
+
+    public String details() {
+        String details = "";
+
+        if (attackValue != 0)
+            details += "    attack:" + attackValue;
+
+        if (defenseValue != 0)
+            details += "     defense:" + defenseValue;
+
+        if (foodValue != 0)
+            details += "     food:" + foodValue;
+
+        return details;
+    } //description of items
+}
